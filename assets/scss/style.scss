@@ -1,0 +1,305 @@
+@import "filterStyle.scss";
+
+.toolbar_row{
+	width: 100%;
+	height: 70px;
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(to right, #e940a8, #7d40e9);
+	color: #fff;
+	font-size: 30px;
+	.filter_btn{
+		width: 28px;
+		height: 22px;
+		position: absolute;
+		left: 28px;
+		cursor: pointer;
+		z-index: 4;
+		.filter_btn_style{
+			width: 100%;
+			height: 22px;
+			transition: .3s;
+			span{
+				width: 100%;
+				height: 2px;
+				position: absolute;
+				top: 48%;
+				left: 0;
+				background-color: #fff;
+				transition: .3s;
+				transform: scale(1);
+			}
+			&:before,
+			&:after{
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: 0;
+			transition: all 0.4s ease 0s;
+			}
+			&:before{
+				top: 0;
+			}
+
+			&._active span{
+				transform: scale(0);
+			}
+			&._active:before{
+				top: 50%;
+				transform: rotate(-45deg);
+			}
+			&._active:after{
+				top: 50%;
+				transform: rotate(45deg);
+			}
+		}
+	
+	}
+	.notes{
+		margin-left: 60px;
+	}
+}
+
+@mixin color_styles($w, $h, $bc, $crs) {
+	width: $w;
+	height: $h;
+	background-color: $bc;
+	cursor: $crs;
+}
+
+.main {
+	padding: 10px;
+	.form {
+		height: 74px;
+		border-radius: 10px;
+		box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+		overflow: hidden;
+		transition: .3s;
+		&.active{
+			height: 115px;
+		}
+		.input{
+			padding: 30px 15px 17px;
+			text-align: center;
+			textarea{
+				width: 100%;
+				height: 27px;
+				background: transparent;
+				border: none;
+				outline: none;
+				resize: none;
+				vertical-align: bottom;
+			}
+		}
+		.colorsForm {
+			width: 100%;
+			padding: 0 15px 10px;
+			overflow: hidden;
+			.colors {
+				width: 100%;
+				display: flex;
+				transform: translate(0px, 40px);
+				transition: .3s;
+				&.active{
+					transform: translate(0px, 0px);
+				}
+				.color1{
+					@include color_styles(16.6%, 30px, #A3CDFA, pointer);
+				}
+				.color2{
+					@include color_styles(16.6%, 30px, #CDA0EA, pointer);
+				}
+				.color3{
+					@include color_styles(16.6%, 30px, #E55758, pointer);
+				}
+				.color4{
+					@include color_styles(16.6%, 30px, #9AF69A, pointer);
+				}
+				.color5{
+					@include color_styles(16.6%, 30px, #FDF867, pointer);
+				}
+				.color6{
+					@include color_styles(16.6%, 30px, #71F4E8, pointer);
+				}
+			}
+		}
+	}
+	.card_form{
+		width: 100%;
+		.cards{
+			width: 100%;
+			padding: 30px 10px;
+			display: flex;
+		}
+		.card{
+			position: relative;
+			min-width: 260px;
+			min-height: 97px;
+			padding: 10px;
+			margin: 5px;
+			border-radius: 4px;
+			box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+			cursor: pointer;
+			transition:.4s;
+			.name{
+				margin: 0;
+				font-size: 17px;
+			}			
+			.date{
+				position: absolute;
+				right: 9px;
+				bottom: 2px;
+				font-size: 11px;
+				opacity: .5;
+				font-weight: 600;
+			}
+		}
+	}
+	.changeDiv {
+		&.active{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: rgba(0, 0, 0, .4);
+			z-index: 5;
+			transition: .4s;
+		}
+		.card_change{
+			position: absolute;
+			top: 40%;
+			left: 36%;
+			width: 400px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 4px;
+			box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.75);
+			transition: .3s;
+			z-index: 5;
+			.card_name{
+				padding: 8px 0;
+			}
+			.div-del-btn {
+				position: absolute;
+				top: 10px;
+				right: 49px;
+				width: 35px;
+				height: 35px;
+				border-radius: 50%;
+				background-color: rgba(0, 0, 0, .2);
+				transition: .4s;
+				cursor: pointer;
+				.del-icon {
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: red;
+					font-size: 23px;
+					pointer-events: none;
+				}
+				&:hover {
+					background-color: rgba(0, 0, 0, .5);
+				}
+			}
+		}
+		.close-change-btn {
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-color: rgba(0, 0, 0, .2);
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			transition: .4s;
+			.close-icon {
+				font-size: 23px;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				pointer-events: none;
+			}
+			&:hover{
+				background-color: rgba(0, 0, 0, .5);
+			}
+		}
+		.color_change{
+			width: 100%;
+			display: flex;
+			.col1{
+				@include color_styles(16.6%, 30px, #A3CDFA, pointer);
+			}
+			.col2{
+				@include color_styles(16.6%, 30px, #CDA0EA, pointer);
+			}
+			.col3{
+				@include color_styles(16.6%, 30px, #E55758, pointer);
+			}
+			.col4{
+				@include color_styles(16.6%, 30px, #9AF69A, pointer);
+			}
+			.col5{
+				@include color_styles(16.6%, 30px, #FDF867, pointer);
+			}
+			.col6{
+				@include color_styles(16.6%, 30px, #71F4E8, pointer);
+			}
+		}
+	}
+}
+.footer {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	transform: scale(0);
+	transition: .4s;
+	&._active{
+		transform: scale(1);
+	}
+	.info {
+		width: 50px;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		background-color: #323232;
+		border-radius: 28px;
+		color: white;
+		overflow: hidden;
+		position: relative;
+		transition-delay: .6s;
+		transition-duration: .5s;
+		&._active {
+			width: 265px;
+		}
+		.add_note {
+			width: 104px;
+			position: absolute;
+			left: 10%;
+		}
+		.btn_undo {
+			position: absolute;
+			background-image: linear-gradient(to right, #e940a8, #7d40e9);
+			color: white;
+			border: none;
+			cursor: pointer;
+			right: -13%;
+			padding: 16px 13px;
+			border-radius: 8px;
+			transition-delay: .6s;
+			transition-duration: .4s;
+			&._active {
+				padding: 3px 13px;
+				right: 10%;
+			}
+		}
+	}
+}

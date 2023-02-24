@@ -1,0 +1,483 @@
+.menu_body .filter_styles .filterbar div .select_color6, .menu_body .filter_styles .filterbar div .select_color5, .menu_body .filter_styles .filterbar div .select_color4, .menu_body .filter_styles .filterbar div .select_color3, .menu_body .filter_styles .filterbar div .select_color2, .menu_body .filter_styles .filterbar div .select_color1, .menu_body .filter_styles .filterbar div .select_items {
+  padding: 13px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.menu_body._active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 4;
+}
+.menu_body .filter_styles {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  outline: 0;
+  -webkit-transform: translate(-200px, 0px);
+          transform: translate(-200px, 0px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu_body .filter_styles._active {
+  -webkit-box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+.menu_body .filter_styles .filterbar {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.menu_body .filter_styles .filterbar .filter {
+  padding: 13px;
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e940a8), to(#7d40e9));
+  background-image: linear-gradient(to right, #e940a8, #7d40e9);
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+.menu_body .filter_styles .filterbar .filter .filter_span {
+  position: absolute;
+  -webkit-transform: translate(100px, 1px);
+          transform: translate(100px, 1px);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.menu_body .filter_styles .filterbar .filter .filter_span._active {
+  -webkit-transform: translate(-17px, 1px);
+          transform: translate(-17px, 1px);
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+.menu_body .filter_styles .filterbar div .select_items {
+  font-size: 28px;
+}
+.menu_body .filter_styles .filterbar div i {
+  margin-right: 13px;
+}
+.menu_body .filter_styles .filterbar div .select_color1 {
+  background-color: #a3cdfa;
+}
+.menu_body .filter_styles .filterbar div .select_color2 {
+  background-color: #cda0ea;
+}
+.menu_body .filter_styles .filterbar div .select_color3 {
+  background-color: #e55758;
+}
+.menu_body .filter_styles .filterbar div .select_color4 {
+  background-color: #9af69a;
+}
+.menu_body .filter_styles .filterbar div .select_color5 {
+  background-color: #fdf867;
+}
+.menu_body .filter_styles .filterbar div .select_color6 {
+  background-color: #71f4e8;
+}
+
+.toolbar_row {
+  width: 100%;
+  height: 70px;
+  padding: 0 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e940a8), to(#7d40e9));
+  background-image: linear-gradient(to right, #e940a8, #7d40e9);
+  color: #fff;
+  font-size: 30px;
+}
+.toolbar_row .filter_btn {
+  width: 28px;
+  height: 22px;
+  position: absolute;
+  left: 28px;
+  cursor: pointer;
+  z-index: 4;
+}
+.toolbar_row .filter_btn .filter_btn_style {
+  width: 100%;
+  height: 22px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.toolbar_row .filter_btn .filter_btn_style span {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 48%;
+  left: 0;
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.toolbar_row .filter_btn .filter_btn_style:before, .toolbar_row .filter_btn .filter_btn_style:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.toolbar_row .filter_btn .filter_btn_style:before {
+  top: 0;
+}
+.toolbar_row .filter_btn .filter_btn_style._active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.toolbar_row .filter_btn .filter_btn_style._active:before {
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.toolbar_row .filter_btn .filter_btn_style._active:after {
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.toolbar_row .notes {
+  margin-left: 60px;
+}
+
+.main {
+  padding: 10px;
+}
+.main .form {
+  height: 74px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main .form.active {
+  height: 115px;
+}
+.main .form .input {
+  padding: 30px 15px 17px;
+  text-align: center;
+}
+.main .form .input textarea {
+  width: 100%;
+  height: 27px;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  vertical-align: bottom;
+}
+.main .form .colorsForm {
+  width: 100%;
+  padding: 0 15px 10px;
+  overflow: hidden;
+}
+.main .form .colorsForm .colors {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate(0px, 40px);
+          transform: translate(0px, 40px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main .form .colorsForm .colors.active {
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+.main .form .colorsForm .colors .color1 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #A3CDFA;
+  cursor: pointer;
+}
+.main .form .colorsForm .colors .color2 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #CDA0EA;
+  cursor: pointer;
+}
+.main .form .colorsForm .colors .color3 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #E55758;
+  cursor: pointer;
+}
+.main .form .colorsForm .colors .color4 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #9AF69A;
+  cursor: pointer;
+}
+.main .form .colorsForm .colors .color5 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #FDF867;
+  cursor: pointer;
+}
+.main .form .colorsForm .colors .color6 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #71F4E8;
+  cursor: pointer;
+}
+.main .card_form {
+  width: 100%;
+}
+.main .card_form .cards {
+  width: 100%;
+  padding: 30px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .card_form .card {
+  position: relative;
+  min-width: 260px;
+  min-height: 97px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.main .card_form .card .name {
+  margin: 0;
+  font-size: 17px;
+}
+.main .card_form .card .date {
+  position: absolute;
+  right: 9px;
+  bottom: 2px;
+  font-size: 11px;
+  opacity: 0.5;
+  font-weight: 600;
+}
+.main .changeDiv.active {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.main .changeDiv .card_change {
+  position: absolute;
+  top: 40%;
+  left: 36%;
+  width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 5;
+}
+.main .changeDiv .card_change .card_name {
+  padding: 8px 0;
+}
+.main .changeDiv .card_change .div-del-btn {
+  position: absolute;
+  top: 10px;
+  right: 49px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.main .changeDiv .card_change .div-del-btn .del-icon {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: red;
+  font-size: 23px;
+  pointer-events: none;
+}
+.main .changeDiv .card_change .div-del-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main .changeDiv .close-change-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.main .changeDiv .close-change-btn .close-icon {
+  font-size: 23px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+.main .changeDiv .close-change-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.main .changeDiv .color_change {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main .changeDiv .color_change .col1 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #A3CDFA;
+  cursor: pointer;
+}
+.main .changeDiv .color_change .col2 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #CDA0EA;
+  cursor: pointer;
+}
+.main .changeDiv .color_change .col3 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #E55758;
+  cursor: pointer;
+}
+.main .changeDiv .color_change .col4 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #9AF69A;
+  cursor: pointer;
+}
+.main .changeDiv .color_change .col5 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #FDF867;
+  cursor: pointer;
+}
+.main .changeDiv .color_change .col6 {
+  width: 16.6%;
+  height: 30px;
+  background-color: #71F4E8;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.footer._active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.footer .info {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #323232;
+  border-radius: 28px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.footer .info._active {
+  width: 265px;
+}
+.footer .info .add_note {
+  width: 104px;
+  position: absolute;
+  left: 10%;
+}
+.footer .info .btn_undo {
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e940a8), to(#7d40e9));
+  background-image: linear-gradient(to right, #e940a8, #7d40e9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  right: -13%;
+  padding: 16px 13px;
+  border-radius: 8px;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.footer .info .btn_undo._active {
+  padding: 3px 13px;
+  right: 10%;
+}
